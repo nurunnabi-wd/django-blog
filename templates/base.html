@@ -17,6 +17,10 @@
       rel="stylesheet"
     />
     <link href=" {% static 'css/blog.css' %} " rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -58,7 +62,7 @@
               >Register</a
             >
             {% else %}
-            <span>You logged is as {{ user }}</span>
+            <span><a href="{% url 'dashboard' %}">Dashboard</a></span>
             &emsp;
             <span><a href="{% url 'logout' %}">Logout</a></span>
             {% endif %}
@@ -78,7 +82,7 @@
       {% block content %} {% endblock %}
       <!-- Footer Part -->
       <footer class="blog-footer">
-        <p>Django blog built with ❤️ by <a href="#">Nurunnabi Jewwel</a></p>
+        <p>Django blog built with ❤️ by <a href="#">Nurunnabi Jewel</a></p>
       </footer>
     </div>
   </body>
